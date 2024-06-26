@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from 'firebase/auth';
-import { getDatabase } from 'firebase/database';
+import { getDatabase, ref, push, get, child, onValue } from 'firebase/database';
 
 // A configuração do Firebase para o app web
 const firebaseConfig = {
@@ -19,4 +19,4 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const database = getDatabase(app);
 
-export { auth, database, GoogleAuthProvider, signInWithPopup, onAuthStateChanged };
+export { auth, database, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, ref, push, get, child, onValue };
